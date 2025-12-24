@@ -21,24 +21,24 @@ jobs:
         with:
           path: ios-client
 
-      - name: Checkout netbird
+      - name: Checkout onenet
         uses: actions/checkout@v4
         with:
-          repository: netbirdio/netbird
-          path: netbird
+          repository: l1feai/one-network
+          path: onenet
 
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.24'
-          cache-dependency-path: netbird/go.sum
+          cache-dependency-path: onenet/go.sum
 
       - name: Install gomobile
         run: go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20251113184115-a159579294ab
 
-      - name: Build NetBirdSDK xcframework
+      - name: Build OneNetSDK xcframework
         working-directory: ios-client
-        run: ./build-go-lib.sh ../netbird
+        run: ./build-go-lib.sh ../onenet
 
       - name: Install xcpretty
         working-directory: ios-client
@@ -48,16 +48,16 @@ jobs:
         working-directory: ios-client
         run: |
           xcodebuild -resolvePackageDependencies \
-            -project NetBird.xcodeproj \
-            -scheme NetBird
+            -project OneNet.xcodeproj \
+            -scheme OneNet
 
       - name: Run Tests
         working-directory: ios-client
         run: |
           set -o pipefail
           xcodebuild test \
-            -project NetBird.xcodeproj \
-            -scheme NetBird \
+            -project OneNet.xcodeproj \
+            -scheme OneNet \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \

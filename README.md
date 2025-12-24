@@ -1,20 +1,20 @@
 <br/>
  <div align="center">
  <p align="center">
-   <img width="234" src="https://raw.githubusercontent.com/netbirdio/netbird/main/docs/media/logo-full.png"/>
+   <img width="234" src="https://raw.githubusercontent.com/l1feai/onenet/main/docs/media/logo-full.png"/>
  </p>
    <p>
-      <a href="https://github.com/netbirdio/netbird/blob/main/LICENSE">
+      <a href="https://github.com/l1feai/onenet/blob/main/LICENSE">
         <img height="20" src="https://www.gnu.org/graphics/gplv3-88x31.png" alt="License: GPL-3.0" />
       </a>
-     <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-vrahf41g-ik1v7fV8du6t0RwxSrJ96A">
-         <img src="https://img.shields.io/badge/slack-@netbird-red.svg?logo=slack" alt="Slack"/>
+     <a href="#">
+         <img src="https://img.shields.io/badge/slack-@l1feai-red.svg?logo=slack" alt="Slack"/>
       </a>
-      <a href="https://github.com/netbirdio/ios-client/actions/workflows/build.yml">
-         <img src="https://github.com/netbirdio/ios-client/actions/workflows/build.yml/badge.svg" alt="Build Status"/>
+      <a href="https://github.com/l1feai/onenet-ios-client/actions/workflows/build.yml">
+         <img src="https://github.com/l1feai/onenet-ios-client/actions/workflows/build.yml/badge.svg" alt="Build Status"/>
       </a>
-      <a href="https://github.com/netbirdio/ios-client/actions/workflows/test.yml">
-         <img src="https://github.com/netbirdio/ios-client/actions/workflows/test.yml/badge.svg" alt="Test Status"/>
+      <a href="https://github.com/l1feai/onenet-ios-client/actions/workflows/test.yml">
+         <img src="https://github.com/l1feai/onenet-ios-client/actions/workflows/test.yml/badge.svg" alt="Test Status"/>
       </a>
    </p>
  </div>
@@ -22,11 +22,11 @@
 
  <p align="center">
  <strong>
-   Start using NetBird at <a href="https://netbird.io/pricing">netbird.io</a>
+   Start using OneNet at <a href="https://l1fe.network">l1fe.network</a>
    <br/>
-   See <a href="https://netbird.io/docs/">Documentation</a>
+   See <a href="https://docs.l1fe.network/">OneNet Documentation</a>
    <br/>
-    Join our <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-vrahf41g-ik1v7fV8du6t0RwxSrJ96A">Slack channel</a>
+    Join our <a href="#">Slack channel</a>
    <br/>
 
  </strong>
@@ -34,29 +34,27 @@
 
  <br>
 
-# NetBird iOS Client
+# OneNet iOS Client
 
-The NetBird iOS client allows connections from mobile devices running iOS 14.0+ to private resources in the NetBird network.
+The OneNet iOS client allows connections from mobile devices running iOS 14.0+ to private resources in the OneNet network.
 
 ## Install
-You can download and install the app from the App Store:
-
-[<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="80">](https://apps.apple.com/app/netbird-p2p-vpn/id6469329339)
+OneNet is only available to L1fe team members. You must ask your team lead to share the app link with you.
 
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/netbirdio/ios-client/assets/32096965/f3eff73a-44e9-46e2-b63d-cce004246875" alt="mainscreen" width="250" style="margin-right: 10px;"/>
-  <img src="https://github.com/netbirdio/ios-client/assets/32096965/0e73f79a-0d95-41eb-8e8e-6ed489c85b14" alt="peer-overview" width="250" style="margin-right: 10px;"/>
-  <img src="https://github.com/netbirdio/ios-client/assets/32096965/a633c80e-86d0-41fe-88d0-8a7bb6cbaf66" alt="menu" width="250"/>
+  <img src="https://github.com/l1feai/onenet-ios-client/assets/32096965/f3eff73a-44e9-46e2-b63d-cce004246875" alt="mainscreen" width="250" style="margin-right: 10px;"/>
+  <img src="https://github.com/l1feai/onenet-ios-client/assets/32096965/0e73f79a-0d95-41eb-8e8e-6ed489c85b14" alt="peer-overview" width="250" style="margin-right: 10px;"/>
+  <img src="https://github.com/l1feai/onenet-ios-client/assets/32096965/a633c80e-86d0-41fe-88d0-8a7bb6cbaf66" alt="menu" width="250"/>
 </p>
 
 ## Code structure
 The code is divided into 4 parts:
-- The main netbird Go code from the [NetBird](https://github.com/netbirdio/netbird) repo which is compiled into an xcframework. This contains most of the client logic.
-- The network extension /NetbirdNetworkExtension that is running in the background where the compiled Go code is executed.
-- The UI and app code under `/NetBird`
-- The `/NetbirdKit/NetworkExtensionAdapter` that controls the extension and builds the link between UI and extension
+- The main onenet Go code from the [OneNet](https://github.com/l1feai/onenet) repo which is compiled into an xcframework. This contains most of the client logic.
+- The network extension /OnenetNetworkExtension that is running in the background where the compiled Go code is executed.
+- The UI and app code under `/OneNet`
+- The `/OnenetKit/NetworkExtensionAdapter` that controls the extension and builds the link between UI and extension
 
 ## Requirements
 
@@ -67,11 +65,11 @@ The code is divided into 4 parts:
 
 ## Run locally
 
-To build the app, this repository and the main netbird repository are needed.
+To build the app, this repository and the main onenet repository are needed.
 
 ```bash
-git clone https://github.com/netbirdio/netbird.git
-git clone https://github.com/netbirdio/ios-client.git
+git clone https://github.com/l1feai/one-network.git
+git clone https://github.com/l1feai/onenet-ios-client.git
 cd ios-client
 ```
 
@@ -80,9 +78,9 @@ Install gomobile if you haven't already:
 go install golang.org/x/mobile/cmd/gomobile@latest
 ```
 
-Build the xcframework from the main netbird repo using the build script:
+Build the xcframework from the main `onenet` repo using the build script:
 ```bash
-./build-go-lib.sh ../netbird
+./build-go-lib.sh ../one-network
 ```
 
 Open the Xcode project, and we are ready to go.
@@ -95,8 +93,8 @@ The app supports Firebase for analytics and crash reporting. To enable it, add y
 
 ## Other project repositories
 
-NetBird project is composed of multiple repositories:
-- NetBird: https://github.com/netbirdio/netbird, contains the code for the agents and control plane services.
-- Dashboard: https://github.com/netbirdio/dashboard, contains the Administration UI for the management service
-- Documentations: https://github.com/netbirdio/docs, contains the documentation from https://netbird.io/docs
-- Android Client: https://github.com/netbirdio/android-client
+OneNet project is composed of multiple repositories:
+- OneNet: https://github.com/l1feai/onenet, contains the code for the agents and control plane services.
+- Dashboard: https://github.com/l1feai/onenet-dashboard, contains the Administration UI for the management service
+- Documentations: https://github.com/l1feai/onenet-docs, contains the documentation from https://docs.l1fe.network
+- Android Client: https://github.com/l1feai/onenet-android-client
